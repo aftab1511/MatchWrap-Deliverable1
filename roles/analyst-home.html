@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyst Dashboard - MatchWrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Analyst Nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html"><i class="bi bi-pencil-square me-2"></i>MatchWrap Content Editor</a>
+            <div class="d-flex align-items-center gap-3">
+                <span class="badge bg-dark">Role: Match Analyst</span>
+                <a href="../login.html" class="btn btn-light btn-sm">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="row">
+            <!-- Left Side: Match Post Creator -->
+            <div class="col-lg-7">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-dark text-white fw-bold">Publish Match Wrap & Player Ratings</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Match Title / Fixture</label>
+                                <input type="text" class="form-control" placeholder="e.g., Real Madrid vs FC Barcelona">
+                            </div>
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <label class="form-label small fw-bold">Home Score</label>
+                                    <input type="number" class="form-control" value="0">
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label small fw-bold">Away Score</label>
+                                    <input type="number" class="form-control" value="0">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Tactical Match Summary</label>
+                                <textarea class="form-control" rows="5" placeholder="Write post-match summary analysis..."></textarea>
+                            </div>
+                            <button type="button" class="btn btn-primary w-100 fw-bold">Publish Match Summary</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Assigned Matches -->
+            <div class="col-lg-5 mt-4 mt-lg-0">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white fw-bold">Assigned Matches for Coverage</div>
+                    <ul class="list-group list-group-flush small">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <strong>Chelsea vs Liverpool</strong><br>
+                                <small class="text-muted">EPL - Kickoff 20:00</small>
+                            </div>
+                            <span class="badge bg-warning text-dark">Drafting</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <strong>Bayern Munich vs Dortmund</strong><br>
+                                <small class="text-muted">Bundesliga - Full Time</small>
+                            </div>
+                            <span class="badge bg-success">Published</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

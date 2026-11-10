@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - MatchWrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- User Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-success" href="../index.html"><i class="bi bi-shield-fill-check me-2"></i>MatchWrap</a>
+            <div class="d-flex align-items-center gap-3">
+                <span class="badge bg-success">Role: General User</span>
+                <a href="../login.html" class="btn btn-outline-danger btn-sm">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="row">
+            <!-- Main Content Area: Match Breakdown -->
+            <div class="col-lg-8">
+                <!-- Match Scorecard -->
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-header bg-dark text-white d-flex justify-content-between">
+                        <span class="fw-bold">UEFA Champions League - Final Wrap</span>
+                        <span class="badge bg-danger">Completed</span>
+                    </div>
+                    <div class="card-body text-center py-4">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <h4>Real Madrid</h4>
+                                <span class="badge bg-secondary">Home</span>
+                            </div>
+                            <div class="col-4">
+                                <h1 class="display-4 fw-bold">2 - 3</h1>
+                                <small class="text-muted">Full Time</small>
+                            </div>
+                            <div class="col-4">
+                                <h4>FC Barcelona</h4>
+                                <span class="badge bg-secondary">Away</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Match Analysis Summary -->
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-header bg-white">
+                        <h5 class="m-0 fw-bold"><i class="bi bi-journal-text me-2"></i>Post-Match Summary</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>A thrilling encounter concluded with FC Barcelona securing a vital 3-2 victory away from home. Real Madrid initially controlled early possession, but tactical adjustments in the second half swung momentum toward the visitors.</p>
+                        <h6 class="fw-bold mt-3">Key Match Events</h6>
+                        <ul class="list-group list-group-flush small">
+                            <li class="list-group-item">⚽ 14' - Goal: Real Madrid (Header)</li>
+                            <li class="list-group-item">⚽ 38' - Goal: FC Barcelona (Penalty)</li>
+                            <li class="list-group-item">🟨 52' - Yellow Card: Real Madrid</li>
+                            <li class="list-group-item">⚽ 89' - Goal: FC Barcelona (Long-range strike)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Community Rating & Comments -->
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white">
+                        <h5 class="m-0 fw-bold"><i class="bi bi-star me-2"></i>Submit Your Match Rating</h5>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Rate this match (1 to 10)</label>
+                                <input type="number" class="form-control" min="1" max="10" value="9">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Your Match Review</label>
+                                <textarea class="form-control" rows="3" placeholder="Share your opinion on team performance..."></textarea>
+                            </div>
+                            <button type="button" class="btn btn-success btn-sm">Submit Review</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar: Saved Favorites & Followed Leagues -->
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-header bg-dark text-white fw-bold">My Saved Matches</div>
+                    <ul class="list-group list-group-flush small">
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Arsenal vs Man City</span>
+                            <span class="badge bg-light text-dark border">1-1</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Inter vs AC Milan</span>
+                            <span class="badge bg-light text-dark border">4-0</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

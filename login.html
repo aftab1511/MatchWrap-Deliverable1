@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MatchWrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-success" href="index.html">
+                <i class="bi bi-shield-fill-check me-2"></i>MatchWrap
+            </a>
+            <a href="index.html" class="btn btn-outline-light btn-sm">Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Login Container -->
+    <div class="container my-auto py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="card shadow-lg border-0 rounded-3">
+                    <div class="card-body p-4 p-sm-5">
+                        <div class="text-center mb-4">
+                            <h3 class="fw-bold">Sign In to MatchWrap</h3>
+                            <p class="text-muted small">Enter your credentials to access your account</p>
+                        </div>
+
+                        <form action="#" method="GET">
+                            <!-- Role Selection Dropdown -->
+                            <div class="mb-3">
+                                <label for="roleSelect" class="form-label fw-bold small">Login Account Role</label>
+                                <select class="form-select" id="roleSelect" onchange="updateLoginRedirect(this.value)">
+                                    <option value="user" selected>General User / Fan</option>
+                                    <option value="analyst">Match Analyst / Editor</option>
+                                    <option value="admin">System Administrator</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="emailInput" class="form-label fw-bold small">Email Address</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="passwordInput" class="form-label fw-bold small">Password</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light"><i class="bi bi-lock"></i></span>
+                                    <input type="password" class="form-control" id="passwordInput" placeholder="••••••••" required>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label small" for="rememberMe">Remember me</label>
+                                </div>
+                                <a href="#" class="small text-success text-decoration-none">Forgot password?</a>
+                            </div>
+
+                            <a id="loginSubmitBtn" href="roles/user-home.html" class="btn btn-success w-100 py-2 fw-bold">Sign In</a>
+                        </form>
+
+                        <div class="text-center mt-4 border-top pt-3">
+                            <p class="small text-muted mb-0">Don't have an account? <a href="signup.html" class="text-success fw-bold text-decoration-none">Sign Up</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Redirection Helper Script -->
+    <script>
+        function updateLoginRedirect(role) {
+            const btn = document.getElementById('loginSubmitBtn');
+            if (role === 'admin') btn.href = 'roles/admin-home.html';
+            else if (role === 'analyst') btn.href = 'roles/analyst-home.html';
+            else btn.href = 'roles/user-home.html';
+        }
+    </script>
+</body>
+</html>
